@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  background-color: coral;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  caret-color: transparent;
+}
+
+.img-holder {
+  width: 400px;
+  height: 400px;
+  background-color: red;
+}
+
+.img-holder > img {
+  width: 400px;
+  height: 400px;
+}
+
+.move {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  transition: transform 0.1s steps(6, end), background-color 0.5s ease;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.move:hover {
+  background-color: black;
+}
+
+.move-back:active {
+  transform: translateX(-20px);
+}
+
+.move-next:active {
+  transform: translateX(20px);
+}
+
+.move > img {
+  width: 30px;
+  height: auto;
+  filter: invert(1);
+}
