@@ -23,6 +23,10 @@ body {
   height: 400px;
 }
 
+.img-holder > img:not(:first-child) {
+  display: none;
+}
+
 .move {
   background-color: transparent;
   border: transparent;
@@ -48,4 +52,41 @@ body {
   width: 30px;
   height: auto;
   filter: invert(1);
+}
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.dot {
+  border-radius: 2rem;
+  background-color: lightgray;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.dot:hover {
+  background-color: darkgray;
+}
+
+.dot:first-child {
+  background-color: gray;
+}
+
+@media screen and (max-width: 500px) {
+  .img-holder {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+  }
+
+  .img-holder > img {
+    width: 200px;
+    height: 200px;
+  }
 }
