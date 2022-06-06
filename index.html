@@ -10,22 +10,22 @@
   </head>
   <body>
     <div class="container">
-      <div class="move-btn-back">
+      <div class="move-btn-back" onclick="arrowClick(-1)">
         <button type="button" class="move move-back">
           <img src="images/back.png" alt="" class="back" />
         </button>
       </div>
       <div class="img-holder">
-        <img src="images/texture-1.webp" alt="white texture" />
-        <img src="images/texture-2.jpeg" alt="blue texture" />
-        <img src="images/texture-3.webp" alt="red texture" />
+        <img src="images/texture-1.webp" alt="white texture" class="pic" />
+        <img src="images/texture-2.jpeg" alt="blue texture" class="pic" />
+        <img src="images/texture-3.webp" alt="red texture" class="pic" />
         <div class="circle-container">
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
+          <span class="dot" onclick="dotClick(1)"></span>
+          <span class="dot" onclick="dotClick(2)"></span>
+          <span class="dot" onclick="dotClick(3) "></span>
         </div>
       </div>
-      <div class="move-btn-next">
+      <div class="move-btn-next" onclick="arrowClick(1)">
         <button type="button" class="move move-next">
           <img src="images/next.png" alt="" class="next" />
         </button>

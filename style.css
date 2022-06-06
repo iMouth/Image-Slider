@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   background-color: coral;
 }
 
@@ -21,6 +22,17 @@ body {
 .img-holder > img {
   width: 400px;
   height: 400px;
+  opacity: 100%;
+  animation: fade 0.5s ease-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .img-holder > img:not(:first-child) {
@@ -31,7 +43,7 @@ body {
   background-color: transparent;
   border: transparent;
   cursor: pointer;
-  transition: transform 0.1s steps(6, end), background-color 0.5s ease;
+  transition: transform 0.2s ease, background-color 0.5s ease;
   border-radius: 0.5rem;
   padding: 0.5rem;
 }
@@ -51,6 +63,7 @@ body {
 .move > img {
   width: 30px;
   height: auto;
+
   filter: invert(1);
 }
 
@@ -74,11 +87,7 @@ body {
   background-color: darkgray;
 }
 
-.dot:first-child {
-  background-color: gray;
-}
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .img-holder {
     width: 200px;
     height: 200px;
